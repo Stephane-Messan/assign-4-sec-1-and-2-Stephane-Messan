@@ -1,1 +1,11 @@
-<div>Hello World!</div>
+<div class="container mt-4 text-center">
+  <h1>{{ title }}</h1>
+  <div class="card" style="width: 18rem;"></div>
+  <div class="btn-group mb-3">
+    <button class="btn btn-outline-success list-contact">List Contact</button>
+    <button class="btn btn-outline-success add-contact">Add Contact</button>
+  </div>
+  <button (click)="toggleForm()">Add Contact</button>
+  <app-contact-form *ngIf="showForm" (contactAdded)="addContact($event)"></app-contact-form>
+  <app-contact-list [contacts]="contacts"></app-contact-list>
+</div>

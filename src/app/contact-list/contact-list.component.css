@@ -1,0 +1,56 @@
+div {
+  padding: 15px; /* Add padding around the main container */
+}
+
+div > button:first-child {
+  margin-bottom: 15px; /* Add space below the "Add Contact" button */
+}
+
+div > div {
+  border-bottom: 1px solid #eee; /* Add a subtle bottom border to separate contacts */
+  margin-bottom: 15px; /* Add more space between each contact */
+  padding: 10px; /* Add padding around each contact */
+  position: relative; /* Make the contact div a positioning context */
+  display: flex; /* Use flexbox to align content */
+  align-items: flex-end; /* Align items to the bottom */
+}
+
+.contact-details {
+  flex-grow: 1; /* Allow name and phone to take up available space */
+}
+
+h3 {
+  margin-top: 0; /* Remove default top margin for the name */
+  margin-bottom: 5px; /* Add a little space below the name */
+  font-size: 1.2em; /* Slightly larger font for the name */
+}
+
+p {
+  margin-top: 0; /* Remove default top margin for the phone number */
+  color: #777; /* Light gray color for the phone number */
+  margin-bottom: 0; /* Remove default bottom margin */
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center; /* Vertically align buttons */
+  position: absolute; /* Position the buttons relative to the contact div */
+  bottom: 10px; /* Align to the bottom */
+  right: 10px; /* Align to the right */
+}
+
+.contact-actions button {
+  background-color: #007bff; /* Blue button background */
+  color: white; /* White button text */
+  border: none; /* Remove button border */
+  padding: 8px 12px; /* Comfortable button padding */
+  border-radius: 5px; /* Rounded button corners */
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-left: 5px; /* Space between buttons */
+  transition: background-color 0.3s ease;
+}
+
+.contact-actions button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

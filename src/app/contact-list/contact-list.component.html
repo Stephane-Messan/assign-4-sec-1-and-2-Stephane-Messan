@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;"></div>
+  <button routerLink="/add-contact">Add Contact</button>
+  <div *ngFor="let contact of contacts">
+    <div class="contact-details">
+      <h3>{{ contact.firstName }} {{ contact.lastName }}</h3>
+      <p>{{ contact.phoneNumber }}</p>
+    </div>
+    <div class="contact-actions">
+      <button>Edit</button>
+      <button>Delete</button>
+    </div>
+  </div>
+</div>
